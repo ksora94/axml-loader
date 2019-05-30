@@ -10,6 +10,38 @@
     npm i multi-entry-plugin --save-dev
 ```
 
+## Config
+webpack.config.js
+```javascript
+import MultiEntryPlugin from 'multi-entry-plugin';
+
+export default {
+  entry: {
+    app: './src/app.axml'
+  },
+  module: {
+    rules: [{
+      test: /\.axml$/,
+      use: [
+        {
+          loader: 'axml-loader'
+        }
+      ]
+    }]
+  },
+  output: {
+    filename: '[name].js',
+    path: resolve(__dirname, '../dist')
+  },
+  plugins: [
+      new MultiEntryPlugin({
+        mainEntry: 'app'
+      })
+  ]
+  // ...
+}
+```
+
 ## SFC(单文件组件)
 
 ### Example
