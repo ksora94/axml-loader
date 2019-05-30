@@ -4,7 +4,7 @@
   "description": "axml loader for webpack",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "babel ./src -d ./lib"
   },
   "repository": {
@@ -14,7 +14,8 @@
   "keywords": [
     "axml",
     "loader",
-    "webpack"
+    "webpack",
+    "webapck-loader"
   ],
   "dependencies": {
     "babel-loader": "^8.0.6",
@@ -23,19 +24,23 @@
     "loader-utils": "^1.2.3",
     "postcss": "^7.0.16"
   },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "babel-jest": "^24.8.0",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "jest": "^24.8.0",
+    "node-sass": "^4.12.0",
+    "rimraf": "^2.6.3",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  },
   "author": "ksora@live.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KSOra/axml-loader/issues"
   },
-  "homepage": "https://github.com/KSOra/axml-loader#readme",
-  "resolutions": {
-    "babel-core": "7.0.0-bridge.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/register": "^7.4.4",
-    "babel-plugin-add-module-exports": "^1.0.2"
-  }
+  "homepage": "https://github.com/KSOra/axml-loader#readme"
 }

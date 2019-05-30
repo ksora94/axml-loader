@@ -1,0 +1,55 @@
+<template>
+	<view class="container">
+		<view class="item" a-if="value > 3">
+			>3
+		</view>
+		<view class="item" a-else-if="value > 2">
+			>2
+		</view>
+		<view class="item" a-else="value > 1">
+			>1
+		</view>
+		<view class="item" a-for="(item, index) in list">
+			{{index}} -> {{item}}
+		</view>
+	</view>
+</template>
+
+<script type="application/json">
+	{
+		"usingComponents": {
+			"component1": "/components1"
+		}
+	}
+</script>
+
+<script>
+  const app = getApp();
+
+  Page({
+    data: {
+      value: 2,
+      list: [1, 2, 3]
+    },
+
+    onLoad() {
+      console.log('onLoad')
+    },
+
+    onShow() {
+      console.log('onLoad')
+    }
+  });
+</script>
+
+<style lang="sass" type="text/scss">
+	.container{
+		font-size: 18px;
+		.item{
+			width: 200Px;
+			&::after{
+				content: ''
+			}
+		}
+	}
+</style>

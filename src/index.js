@@ -38,8 +38,7 @@ export default function (content) {
               'config',
               [
                 `file-loader?name=[name].json&outputPath=${outputPath}`
-              ],
-              parts.config.attrs.src
+              ]
           )
         }
         if (parts.template) {
@@ -47,8 +46,7 @@ export default function (content) {
               'template',
               [
                 `file-loader?name=[name].axml&outputPath=${outputPath}`
-              ],
-              parts.template.attrs.src
+              ]
           );
         }
         if (parts.style) {
@@ -56,8 +54,8 @@ export default function (content) {
               'style',
               [
                 `file-loader?name=[name].acss&outputPath=${outputPath}`,
-                ...getLangLoader(parts.style.attrs.lang),
-                `${__dirname}/transform/style.js`
+                `${__dirname}/transform/style.js`,
+                ...getLangLoader(parts.style.attrs.lang)
               ],
               parts.style.attrs.src
           );

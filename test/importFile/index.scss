@@ -1,0 +1,9 @@
+.container{
+    font-size: 18px;
+    .item{
+        width: 200Px;
+        &::after{
+            content: ''
+        }
+    }
+}

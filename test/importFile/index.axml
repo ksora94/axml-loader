@@ -1,0 +1,28 @@
+<template>
+	<view class="container">
+		<view class="item" a-if="value > 3">
+			>3
+		</view>
+		<view class="item" a-else-if="value > 2">
+			>2
+		</view>
+		<view class="item" a-else="value > 1">
+			>1
+		</view>
+		<view class="item" a-for="(item, index) in list">
+			{{index}} -> {{item}}
+		</view>
+	</view>
+</template>
+
+<config>
+	{
+		"usingComponents": {
+			"component1": "/components1"
+		}
+	}
+</config>
+
+<script src="./index.js"></script>
+
+<style lang="sass" src="./index.scss"></style>
