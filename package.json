@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "build": "babel ./src -d ./lib"
+    "dev": "babel ./src -d ./lib -w",
+    "build": "babel ./src -d ./lib",
+    "pre": "rm -rf ./lib && mkdir lib"
   },
   "repository": {
     "type": "git",
